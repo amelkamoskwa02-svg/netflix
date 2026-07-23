@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Strona z Filmami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1>Moja Strona z Filmami i Serialami</h1>
+        <div class="category-buttons">
+            <button class="category-btn active" data-category="csi">CSI</button>
+            <button class="category-btn" data-category="serial1670_s1">1670 (Sezon 1)</button>
+            <button class="category-btn" data-category="serial1670_s2">1670 (Sezon 2)</button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <!-- Sekcja odtwarzacza -->
+        <section id="player-section" class="player-section">
+            <div class="player-header">
+                <h2 id="video-title">Wybierz film lub odcinek</h2>
+                <div class="player-actions">
+                    <button id="mobile-fullscreen-btn" class="action-btn">📱 Pełny ekran</button>
+                    <button id="next-btn" class="action-btn" style="display: none;">Następny ➡</button>
+                    <button id="close-btn" class="action-btn close-btn" style="display: none;">✖ Zamknij</button>
+                </div>
+            </div>
+
+            <div id="player-wrapper" class="player-wrapper">
+                <img src="https://placehold.co/800x450/111111/FFFFFF?text=Wybierz+odcinek+z+listy+ponizej" alt="Podgląd" id="placeholder-img">
+            </div>
+
+            <div id="timestamp-controls" class="timestamp-controls" style="display: none;">
+                <label for="time-input">Notatka czasowa / Zakładka:</label>
+                <input type="text" id="time-input" placeholder="np. 12:34 lub opis">
+                <button id="save-time-btn" class="save-btn">Zapisz czas</button>
+            </div>
+        </section>
+
+        <!-- Siatka z filmami -->
+        <section class="movies-section">
+            <h2>Dostępne odcinki</h2>
+            <div id="movies-grid" class="movies-grid">
+                <!-- Generowane dynamicznie przez JS -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
